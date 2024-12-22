@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: "Exo 2", sans-serif;
+}
+
+.back-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .back-video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .back-video {
+        width: auto;
+        height: 100%;
+    }
+}
+
+img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+h1 {
+    color: #80ff00;
+    font-family: "Exo 2", sans-serif;
+    text-align: center;
+}
+
+#name {
+    color: #06ffac;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 5px;
+}
+
+#tell {
+    width: 280px;
+    display: none;
+    margin: 10px auto;
+    text-align: center;
+}
+
+button {
+    background-color: rgb(191, 255, 15);
+    padding: 20px;
+    border: 4px solid #0ffde5;
+    border-radius: 50%;
+    font-size: 40px;
+    color: #0456fa;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 10px 15px rgba(55, 242, 248, 0.7),
+        0 0 30px rgba(57, 248, 98, 0.5),
+        0 0 45px rgba(45, 247, 237, 0.3);
+    display: block;
+    margin: 20px auto;
+}
+
+button:hover {
+    box-shadow: 0 0 25px rgba(0, 140, 247, 1),
+        0 0 50px rgba(46, 160, 247, 0.7),
+        0 0 75px rgba(0, 140, 247, 0.5);
+    transform: scale(1.15);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #name {
+        font-size: 1.2rem;
+    }
+
+    button {
+        padding: 18px;
+        font-size: 36px;
+    }
+
+    img {
+        max-width: 280px;
+    }
+}
+
+/* Very Small Screens */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    #name {
+        font-size: 1rem;
+    }
+
+    button {
+        padding: 15px;
+        font-size: 30px;
+    }
+
+    img {
+        max-width: 250px;
+    }
+
+    #tell {
+        width: 250px;
+    }
+}
